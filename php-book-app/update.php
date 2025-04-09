@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
       // 更新した件数を取得する
       $count = $stmt_update->rowCount();
 
-      $message = "商品を{$count}件編集しました。";
+      $message = "書籍を{$count}件編集しました。";
 
       // 商品一覧ページにリダイレクトさせる（同時にmessageパラメータも渡す）
       header("Location: read.php?message={$message}");
@@ -129,7 +129,7 @@ if (isset($_GET['id'])) {
                     <input type="number" id="stock_quantity" name="stock_quantity" value="<?= $book['stock_quantity'] ?>" min="0" max="100000000" required>
 
                     <label for="genre_code">ジャンルコード</label>
-                    <select id="genrer_code" name="genre_code" required>
+                    <select id="genre_code" name="genre_code" required>
                         <option disabled selected value>選択してください</option>
                         <?php
                         // 配列の中身を順番に取り出し、セレクトボックスの選択肢として出力する
@@ -149,7 +149,7 @@ if (isset($_GET['id'])) {
         </article>
     </main>
     <footer>
-        <p class="copyright">&copy; 商品管理アプリ All rights reserved.</p>
+        <p class="copyright">&copy; 書籍管理アプリ All rights reserved.</p>
     </footer>
 </body>
 
